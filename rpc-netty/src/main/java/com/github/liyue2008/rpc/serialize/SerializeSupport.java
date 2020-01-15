@@ -70,6 +70,7 @@ public class SerializeSupport {
 
     }
 
+    //通过泛型,调用不同的序列化方法
     public static <E> byte [] serialize(E  entry) {
         @SuppressWarnings("unchecked")
         Serializer<E> serializer = (Serializer<E>) serializerMap.get(entry.getClass());
